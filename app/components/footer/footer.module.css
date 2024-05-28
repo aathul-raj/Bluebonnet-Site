@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
+footer.footer{
+    padding: 0;
+    margin: 0;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Sen", sans-serif;
+}
+
+.footerContent{
+    height: 25vh;
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footerCta{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: "Merriweather", serif;
+    margin-bottom: 3rem;
+}
+
+.footerCta h3{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.footerCta p{
+    font-size: 3rem;
+    font-style: italic;
+}
+
+.footerLinks, .footerServices{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    flex: 1;
+}
+
+.footerIcons{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    flex: 1;
+}
+
+.footerIcons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerLink{
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.socialLink{
+    margin: 0 1.5rem;
+    color: black;
+    font-size: 3rem;
+}
+
+.footerLogo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.footerLogoImg{
+    margin: 0 2rem;
+}
+
+.footerLogoLine{
+    transform: translateY(10px);
+    border-radius: 5px;
+    background-color: black;
+    height: 5px;
+    width: 35vw;
+}
+
+@media screen and (max-width: 1000px) {
+    .footerContent {
+      align-items: center;
+      margin-bottom: 1rem;
+      height: 17vh;
+    }
+  
+    .footerLinks,
+    .footerServices {
+      margin-bottom: 1rem;
+    }
+  
+    .footerIcons {
+      margin-bottom: 1rem;
+    }
+
+    .socialLink{
+        font-size: 2rem;
+        margin: 0 .5rem;
+    }
+  
+    .footerLogoImg {
+      width: 200px;
+    }
+
+    .footerLogoLine{
+        width: 15vw;
+        height: 3px;
+    }
+
+    .footerCta h3, .footerCta p{
+        font-size: 2.5rem;
+    }
+  }

@@ -1,230 +1,377 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Sen", sans-serif;
 }
 
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
+.landingContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 2rem;
+    min-height: 100%;
 }
 
-.description a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+.landingText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
 }
 
-.description p {
-  position: relative;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
+.landingText h1{
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
 }
 
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
+.landingText h1 span.blueText{
+    color: #2272BC;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  max-width: 100%;
-  width: var(--max-width);
+.landingText h1 span.redText{
+    color: #EF3272;
 }
 
-.card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
+.landingText p{
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
 }
 
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
+.landingImageContainer {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}  
+
+button.servicesButton{
+    font-size: 1.25rem;
+    font-weight: lighter;
+    color: white;
+    background-color: #4B479D;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.5s ease;
+    border: none;
 }
 
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
+button.servicesButton:hover{
+    /* background-color: #3A3683; */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-  text-wrap: balance;
+.crayon, .painting, .tools{
+    position: absolute;
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
+.crayon {
+    left: 45vw;
+    bottom: 20vh;
 }
 
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
+.tools{
+    top: 40vh;
+    right: 5vw;
 }
 
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
+.painting{
+    z-index: 10;
+    top: 20vh;
+    right: 40vw;
 }
 
-.center::before,
-.center::after {
-  content: "";
-  left: 50%;
-  position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
-}
-
-.logo {
-  position: relative;
-}
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-
-  .card:hover span {
-    transform: translateX(4px);
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .card:hover span {
-    transform: none;
-  }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .content {
-    padding: 4rem;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
-  }
-
-  .card {
-    padding: 1rem 2.5rem;
-  }
-
-  .card h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .center {
-    padding: 8rem 0 6rem;
-  }
-
-  .center::before {
-    transform: none;
-    height: 300px;
-  }
-
-  .description {
-    font-size: 0.8rem;
-  }
-
-  .description a {
-    padding: 1rem;
-  }
-
-  .description p,
-  .description div {
+.scrollArrow {
+    margin-top: 4rem;
+    bottom: 2rem;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    animation: scrollAnimation 5s infinite;
+    background-color: black;
     display: flex;
     justify-content: center;
-    position: fixed;
-    width: 100%;
-  }
-
-  .description p {
     align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.5s ease;
+}
+  
+.scrollDownImage{
+    background-color: black;
+}
+
+.scrollArrow:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes scrollAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+.storyContainer, .missionContainer, .expertiseContainer{
+    display: flex;
+    margin-top: 15rem;
+    width: 75%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.storyContainer h2, .missionContainer h2, .expertiseContainer h2{
+    font-family: "Merriweather", serif;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.storyContainer h2 span.yellowText{
+    color: #FABB26;
+}
+
+.storyContainer p, .missionContainer p{
+    font-size: 1.25rem;
+}
+
+.expertiseContainer p{
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.expertiseContainer li{
+    font-size: 1.25rem;
+}
+
+.missionContainer h2 span.purpleText{
+    color: #4B479D;
+}
+
+.expertiseContainer h2 span.redText{
+    color: #EF3272;
+}
+
+.missionHeaderContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.missionHeaderContainer .starImage{
+    margin-left: 2rem;
+}
+
+/* Contact Form */
+.contactContainer{
+    display: flex;
+    margin-top: 15rem;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 15rem;
+}
+
+.contactFormContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 75%;
+}
+
+.contactContainer h2 {
+    font-family: "Merriweather", serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.contactFormContainer h2 span.blueText{
+    color: #2272BC;
+}
+  
+.contactContainer p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+  
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+}
+  
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+  
+.formGroup label {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+  
+.formGroup input,
+.formGroup textarea {
+    font-family: "Sen", sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+  }
+  
+.sendButton {
+    font-size: 1.25rem;
+    font-weight: lighter;
+    color: white;
+    background-color: #4B479D;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.5s ease;
+    cursor: pointer;
+    align-self: flex-start;
     border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
-  }
-
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
-  }
+}
+  
+.sendButton:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
+.mobileText{
+    display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
+@media screen and (max-width: 1000px) {
 
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
+    .mobileText{
+        display: block;
+    }
 
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
+    .desktopText{
+        display: none;
+    }
+    
+    .crayon,
+    .painting,
+    .tools, .starImage {
+      display: none;
+    }
+  
+    .landingImageContainer {
+      display: none;
+    }
+  
+    .landingContainer {
+        margin-top: 2rem;
+      flex-direction: column;
+      padding: 0 1rem;
+    }
+  
+    .landingText {
+      padding-right: 0;
+      text-align: center;
+      align-items: center;
+    }
+  
+    .landingText h1 {
+      font-size: 2.5rem;
+    }
+
+    .storyContainerText h2, .missionContainerText h2, .expertiseContainerText h2, .contactContainer h2{
+        font-size: 2.5rem;
+    }
+
+    .storyContainerText p, .missionContainerText p, .expertiseContainerText p, .expertiseContainerText li, .contactContainer p, 
+    .contactFormContainer p, .formGroup label, .formGroup input, .formGroup textarea, .sendButton, button.servicesButton{
+        font-size: 1rem;
+    }
+
+    .expertiseContainerText li{
+        margin-left: 1rem;
+    }
+  
+    .landingText p {
+      font-size: 1rem;
+    }
+
+    .scrollArrow{
+        margin-bottom: 10rem;
+    }
+  
+    .servicesButton {
+      margin-top: 1rem;
+    }
+  
+    .storyContainer,
+    .missionContainer,
+    .expertiseContainer,
+    .contactContainer {
+      flex-direction: column;
+      margin-top: 5rem;
+      width: 100%;
+      padding: 0 1rem;
+      margin-bottom: 8rem;
+    }
+
+    .storyContainer, .missionContainer{
+        text-align: center;
+    }
+  
+    .storyImage,
+    .contactImage {
+      width: 50%;
+      height: 50%;
+    }
+
+    .storyImage{
+        margin-top: 3rem;
+    }
+
+    .contactImage{
+        margin-top: 5rem;
+    }
+
+    .blueBonnetImage{
+        width: 30%;
+        height: 30%;
+        margin-top: 2rem;
+    }
+
+    .expertImage{
+        display: none;
+    }
+  
+    .missionHeaderContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .missionHeaderContainer .starImage {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+  
+    .contactFormContainer {
+      width: 100%;
+    }
   }
-  to {
-    transform: rotate(0deg);
-  }
-}

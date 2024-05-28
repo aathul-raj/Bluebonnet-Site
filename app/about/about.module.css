@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
+main.aboutContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutStoryContainer{
+    margin: 10rem 0;
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.aboutStoryContainer h2{
+    font-family: "Merriweather", serif;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.aboutStoryContainer h2 span.blueText{
+    color: #2272BC;
+}
+
+.aboutStoryContainer p{
+    font-size: 1.25rem;
+    font-family: "Sen", sans-serif;
+}
+
+.arrowOne, .arrowTwo{
+    position: absolute;
+}
+
+.arrowOne{
+    top: 29vh;
+    left: 30vw;
+}
+
+.arrowTwo{
+    bottom: 9vh;
+    left: 14vw;
+}
+
+.mobileText{
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .mobileText{
+        display: block;
+    }
+
+    .desktopText{
+        display: none;
+    }
+
+    .arrowOne, .arrowTwo {
+      display: none;
+    }
+
+    .aboutContainer{
+        flex-direction: column;
+    }
+
+    .aboutStoryContainer{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .aboutProfileImage{
+        width: 250px;
+    }
+
+    .aboutStoryContainer h2{
+        font-size: 2.5rem;
+    }
+
+    .aboutStoryContainer p{
+        font-size: 1rem;
+    }
+
+    .aboutStoryContainer{
+        margin-bottom: 10rem;
+    }
+  }
