@@ -93,8 +93,8 @@ export default function Services(){
                 <div className={styles.contactContainer}>
                     <div className={styles.contactFormContainer}>
                         <h2><span className={styles.blueText}>Contact</span> Us</h2>
-                        <p className={styles.desktopText}>Fill out the form below, and we'll<br/> get back to you as soon as possible.</p>
-                        <p className={styles.mobileText}>Fill out the form below, and we'll get back to you as soon as possible.</p>
+                        <p className={styles.desktopText}>Fill out the form below, and we&apos;ll<br/> get back to you as soon as possible.</p>
+                        <p className={styles.mobileText}>Fill out the form below, and we&apos;ll get back to you as soon as possible.</p>
                         <form className={styles.contactForm}>
                         <div className={styles.formGroup}>
                             <label htmlFor="name">Name</label>

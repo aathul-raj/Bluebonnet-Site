@@ -36,7 +36,7 @@ const Footer = () => {
 
         <div className={styles.footerCta}>
             <h3>How can we help?</h3>
-            <p>Let's talk.</p>
+            <p>Let&apos;s talk.</p>
         </div>
     </footer>
   );
