@@ -34,7 +34,7 @@ export default function Services(){
             <Header />
             <main className={styles.servicesContainer}>
                 <div className={styles.servicesHeaderContainer}>
-                    <h1>Our <span className={styles.redText}>Services</span></h1>
+                    <h1><span className={styles.blueText}>Our Services</span></h1>
                 </div>
 
                 <div className={styles.serviceContainer}>

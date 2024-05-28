@@ -21,8 +21,8 @@ main.servicesContainer{
     font-size: 3.5rem;
 }
 
-.servicesHeaderContainer h1 span.redText{
-    color: #EF3272;
+.servicesHeaderContainer h1 span.blueText{
+    color: #2272BC;
 }
 
 .serviceContainer{

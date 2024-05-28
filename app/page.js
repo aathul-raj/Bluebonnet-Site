@@ -47,8 +47,8 @@ export default function Home() {
 
         <div className={styles.landingContainer}>
           <div className={styles.landingText}>
-            <h1><span className={styles.blueText}>Unleashing</span> <br/>Potential, 
-            <br/><span className={styles.redText}>Empowering</span> <br/>Success</h1>
+            <h1><span className={styles.blueText}>Unleashing<br/>  Potential,</span> 
+            <br/><span className={styles.blueText}>Empowering <br/>Success</span></h1>
             <p>Unlocking every child&apos;s unique potential<br/> through comprehensive evaluations and<br/> personalized support for students<br/> with special needs.</p>
             <button className={styles.servicesButton}>Our Services</button>
           </div>
@@ -109,7 +109,7 @@ passion for serving the special education community.</p>
           </div>
         </div>
 
-        <div className={styles.contactContainer}>
+        <div className={styles.contactContainer} id="contact">
           <div className={styles.contactFormContainer}>
             <h2><span className={styles.blueText}>Contact</span> Us</h2>
             {successMessage && <p className={styles.successMessage}>{successMessage}</p>}

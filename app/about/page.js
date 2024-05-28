@@ -16,7 +16,7 @@ export default function About(){
             <div className={styles.aboutStoryContainer}>
                 <Image src={Headshot.src} alt="Headshot" width={400} height={400} className={styles.aboutProfileImage}/>
                 <div className={styles.aboutStoryContainerText}>
-                    <h2><span className={styles.blueText}>About</span> Dr. Kidd</h2>
+                    <h2><span className={styles.blueText}>About Dr. Kidd</span> </h2>
                     <p className={styles.desktopText}>Dr. Kidd is a bilingual educational diagnostician who earned her Bachelor’s Degree in<br/>
                         Education with a minor in Elementary Education studies from the Pontifical Catholic<br/>
                         University. She earned her first Master’s Degree in Special Education with a major<br/>

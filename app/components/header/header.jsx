@@ -13,7 +13,7 @@ export default function Header(){
                 <li><a className={styles.navButton} href="/">Home</a></li>
                 <li><a className={styles.navButton} href="/about">About</a></li>
                 <li><a className={styles.navButton} href="/services">Services</a></li>
-                <li><a className={styles.contactButton} href="">Contact</a></li>
+                <li><a className={styles.contactButton} href="/#contact">Contact</a></li>
             </ul>
         </header>
     )
