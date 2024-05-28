@@ -1,4 +1,6 @@
+'use client'
 import Header from "./components/header/header";
+import { useState } from 'react';
 import LandingImage from "../public/Landing_Image.svg";
 import styles from "./page.module.css";
 import Image from "next/image";
@@ -14,6 +16,31 @@ import ContactImage from "../public/Contact_Image.svg";
 import Footer from "./components/footer/footer";
 
 export default function Home() {
+  const [successMessage, setSuccessMessage] = useState('');
+  async function handleSubmit(event) {
+      event.preventDefault();
+      const formData = new FormData(event.target);
+
+      formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY);
+
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: json
+      });
+      const result = await response.json();
+      if (result.success) {
+        setSuccessMessage('Thank you for your message. We will get back to you soon!');
+        event.target.reset();
+      }
+  }
+
   return (
     <>
       <Header />
@@ -89,8 +116,9 @@ passion for serving the special education community.</p>
         <div className={styles.contactContainer}>
           <div className={styles.contactFormContainer}>
             <h2><span className={styles.blueText}>Contact</span> Us</h2>
-            <p>Fill out the form below, and we&apos;ll<br/> get back to you as soon as possible.</p>
-            <form className={styles.contactForm}>
+            {successMessage && <p className={styles.successMessage}>{successMessage}</p>}
+            {!successMessage && <p>Fill out the form below, and we&apos;ll<br/> get back to you as soon as possible.</p>}
+            <form className={styles.contactForm} onSubmit={handleSubmit}>
               <div className={styles.formGroup}>
                 <label htmlFor="name">Name</label>
                 <input type="text" id="name" name="name" required />

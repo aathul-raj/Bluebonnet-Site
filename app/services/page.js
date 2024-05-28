@@ -1,3 +1,5 @@
+"use client"
+import { useState } from 'react';
 import Footer from '../components/footer/footer';
 import Header from '../components/header/header';
 import styles from './services.module.css';
@@ -6,6 +8,30 @@ import ContactImage from "../../public/Contact_Image.svg";
 import Image from 'next/image';
 
 export default function Services(){
+    const [successMessage, setSuccessMessage] = useState('');
+    async function handleSubmit(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+  
+        formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY);
+  
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+  
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json"
+            },
+            body: json
+        });
+        const result = await response.json();
+        if (result.success) {
+          setSuccessMessage('Thank you for your message. We will get back to you soon!');
+          event.target.reset();
+        }
+    }
     return (
         <>
             <Header />
@@ -93,22 +119,26 @@ export default function Services(){
                 <div className={styles.contactContainer}>
                     <div className={styles.contactFormContainer}>
                         <h2><span className={styles.blueText}>Contact</span> Us</h2>
+                        {successMessage && <p className={styles.successMessage}>{successMessage}</p>}
+                        {!successMessage && <>
                         <p className={styles.desktopText}>Fill out the form below, and we&apos;ll<br/> get back to you as soon as possible.</p>
                         <p className={styles.mobileText}>Fill out the form below, and we&apos;ll get back to you as soon as possible.</p>
-                        <form className={styles.contactForm}>
-                        <div className={styles.formGroup}>
-                            <label htmlFor="name">Name</label>
-                            <input type="text" id="name" name="name" required />
-                        </div>
-                        <div className={styles.formGroup}>
-                            <label htmlFor="email">Email</label>
-                            <input type="email" id="email" name="email" required />
-                        </div>
-                        <div className={styles.formGroup}>
-                            <label htmlFor="message">Message</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" className={styles.sendButton}>Send</button>
+                        </>}
+                        
+                        <form className={styles.contactForm} onSubmit={handleSubmit}>
+                            <div className={styles.formGroup}>
+                                <label htmlFor="name">Name</label>
+                                <input type="text" id="name" name="name" required />
+                            </div>
+                            <div className={styles.formGroup}>
+                                <label htmlFor="email">Email</label>
+                                <input type="email" id="email" name="email" required />
+                            </div>
+                            <div className={styles.formGroup}>
+                                <label htmlFor="message">Message</label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" className={styles.sendButton}>Send</button>
                         </form>
                     </div>
                     <Image src={ContactImage.src} alt="Contact" width={400} height={400} className={styles.contactImage}/>

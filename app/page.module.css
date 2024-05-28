@@ -261,6 +261,13 @@ button.servicesButton:hover{
     display: none;
 }
 
+p.successMessage{
+    margin-top: 1rem;
+    color: #479D4A;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
 @media screen and (max-width: 1000px) {
 
     .mobileText{
