@@ -12,26 +12,23 @@ export default function Services(){
     async function handleSubmit(event) {
         event.preventDefault();
         const formData = new FormData(event.target);
-  
-        formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY);
-  
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
-  
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json"
-            },
-            body: json
+      
+        const response = await fetch('/api/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(Object.fromEntries(formData)),
         });
-        const result = await response.json();
-        if (result.success) {
+      
+        if (response.ok) {
           setSuccessMessage('Thank you for your message. We will get back to you soon!');
           event.target.reset();
+        } else {
+          console.error('Error submitting form');
         }
-    }
+      }
+
     return (
         <>
             <Header />
