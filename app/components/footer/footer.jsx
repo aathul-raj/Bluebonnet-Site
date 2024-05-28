@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import Logo from "../../../public/Logo.svg"
-import styles from './Footer.module.css';
+import styles from './footer.module.css';
 import Image from 'next/image';
 
 const Footer = () => {
