@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link';
 import Header from "./components/header/header";
 import { useState } from 'react';
 import LandingImage from "../public/Landing_Image.svg";
@@ -51,7 +52,9 @@ export default function Home() {
             <h1><span className={styles.blueText}>Unleashing<br/>  Potential,</span> 
             <br/><span className={styles.blueText}>Empowering <br/>Success</span></h1>
             <p>Unlocking every child&apos;s unique potential<br/> through comprehensive evaluations and<br/> personalized support for students<br/> with special needs.</p>
-            <button className={styles.servicesButton}>Our Services</button>
+            <Link href="/services" passHref>
+                <button className={styles.servicesButton}>Our Services</button>
+            </Link>
           </div>
           <div className={styles.landingImageContainer}>
             <Image src={LandingImage.src} alt="Children in school" fill/>
