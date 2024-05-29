@@ -117,6 +117,7 @@ footer.footer{
     }
   
     .footerLogoImg {
+        align-self: center;
         z-index: 10;
       width: 300px;
     }

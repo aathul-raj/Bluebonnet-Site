@@ -57,6 +57,7 @@ header.header ul li a.contactButton:hover{
     }
   
     .logoContainer {
+      align-self: center;
       width: 300px;
       height: 125px;
       margin-bottom: 1rem;
