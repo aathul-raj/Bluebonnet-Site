@@ -11,7 +11,7 @@ const Footer = () => {
 
         <div className={styles.footerLogo}>
             <div className={styles.footerLogoLine}></div>
-            <Image src={Logo} alt="Logo" className={styles.footerLogoImg} width={300}/>
+                <Image src={Logo} layout="responsive" alt="Logo" className={styles.footerLogoImg} width={300}/>
             <div className={styles.footerLogoLine}></div>
         </div>
 

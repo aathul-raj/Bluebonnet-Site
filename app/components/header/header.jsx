@@ -6,7 +6,7 @@ export default function Header(){
     return (
         <header className={styles.header}>
             <div className={styles.logoContainer}>
-                <Image src={Logo.src} alt="Bluebonnet Logo" fill sizes="100vh" style={{ objectFit: "contain" }}/>
+                <Image src={Logo.src} alt="Bluebonnet Logo" layout="responsive" width={300} height={200} className={styles.headerLogoImage}/>
             </div>
 
             <ul>

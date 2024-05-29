@@ -15,6 +15,13 @@ header.header{
     height: 200px;
 }
 
+.headerLogoImage {
+  margin-top: 1rem;
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+
 header.header ul{
     display: flex;
     list-style: none;
