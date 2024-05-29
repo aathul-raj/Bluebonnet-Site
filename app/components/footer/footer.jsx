@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
-import Logo from "../../../public/Logo.svg"
+import Logo from "../../../public/Logo.png"
 import styles from './footer.module.css';
 import Image from 'next/image';
 

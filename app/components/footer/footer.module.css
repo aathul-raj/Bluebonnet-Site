@@ -85,7 +85,7 @@ footer.footer{
 
 .footerLogoImg{
     margin: 0 2rem;
-    max-width: 100%;
+    max-width: 300px;
     height: auto;
 }
 
@@ -117,6 +117,11 @@ footer.footer{
         font-size: 2rem;
         margin: 0 .5rem;
     }
+
+    .footerLogo{
+        height: 200px;
+        width: 350px;
+    }
   
     .footerLogoImg {
         align-self: center;
@@ -124,7 +129,7 @@ footer.footer{
     }
 
     .footerLogoLine{
-        width: 5vw;
+        width: 10vw;
         height: 3px;
     }
 

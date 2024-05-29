@@ -1,4 +1,4 @@
-import Logo from "../../../public/Logo.svg"
+import Logo from "../../../public/Logo.png"
 import styles from "./header.module.css"
 import Image from "next/image";
 
