@@ -4,7 +4,7 @@ import Footer from '../components/footer/footer';
 import Header from '../components/header/header';
 import styles from './services.module.css';
 import RightArrow from "../../public/Right_Arrow.svg";
-import ContactImage from "../../public/Contact_Image.svg";
+import ContactImage from "../../public/ContactChild.svg";
 import Image from 'next/image';
 
 export default function Services(){
@@ -138,7 +138,7 @@ export default function Services(){
                             <button type="submit" className={styles.sendButton}>Send</button>
                         </form>
                     </div>
-                    <Image src={ContactImage.src} alt="Contact" width={400} height={400} className={styles.contactImage}/>
+                    <Image src={ContactImage.src} alt="Contact" width={350} height={350} className={styles.contactImage}/>
                 </div>
             </main>
             <Footer />

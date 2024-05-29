@@ -153,6 +153,10 @@ p.successMessage{
     font-size: 1.25rem;
 }
 
+.contactImage{
+    transform: translateX(3rem);
+}
+
 @media screen and (max-width: 1000px){
 
     .mobileText{
@@ -193,6 +197,7 @@ p.successMessage{
     .contactImage{
         width: 250px;
         margin-top: 5rem;
+        transform: translateX(0);
     }
 
     .contactFormContainer h2 {

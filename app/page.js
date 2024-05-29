@@ -91,13 +91,13 @@ passion for serving the special education community.</p>
         </div>
 
         <div className={styles.expertiseContainer}>
-          <Image src={Expertise.src} alt="Headshot" width={500} height={500} className={styles.expertImage}/>
+          <Image src={Expertise.src} alt="Headshot" width={400} height={450} className={styles.expertImage}/>
           <div className={styles.expertiseContainerText}>
             <h2><span className={styles.blueText}>Areas Of Expertise</span></h2>
             <div className={styles.servicesText}>
-              <p>Our experienced staff specializes in monolingual and bilingual educational and<br/>
-                  individualized program planning along with completing comprehensive full and<br/> individual evaluations. 
-                  Services include, but are not limited to, evaluations in the<br/> areas of:</p>
+              <p>Our experienced staff specializes in monolingual and bilingual educational and
+                  individualized program planning along with completing comprehensive full and individual evaluations. 
+                  Services include, but are not limited to, evaluations in the areas of:</p>
               <ul>
                 <li>Specific Learning Disability</li>
                 <li>Dyslexia and Dysgraphia</li>
@@ -134,7 +134,7 @@ passion for serving the special education community.</p>
               <button type="submit" className={styles.sendButton}>Send</button>
             </form>
           </div>
-          <Image src={ContactChild.src} alt="Contact" width={400} height={400} className={styles.contactImage}/>
+          <Image src={ContactChild.src} alt="Contact" width={350} height={350} className={styles.contactImage}/>
         </div>
         <Footer />
       </main>

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
 
+.aboutProfileImage{
+    transform: translateX(-2rem);
+}
+
 main.aboutContainer{
     display: flex;
     flex-direction: column;
@@ -35,8 +39,8 @@ main.aboutContainer{
 }
 
 .arrowOne{
-    top: 29vh;
-    left: 30vw;
+    top: 30vh;
+    left: 20vw;
 }
 
 .arrowTwo{
@@ -47,6 +51,7 @@ main.aboutContainer{
 .mobileText{
     display: none;
 }
+
 
 @media screen and (max-width: 1000px) {
     .mobileText{
@@ -73,6 +78,7 @@ main.aboutContainer{
 
     .aboutProfileImage{
         width: 250px;
+        transform: translateX(0);
     }
 
     .aboutStoryContainer h2{
