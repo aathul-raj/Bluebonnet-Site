@@ -14,6 +14,7 @@ import Stars from "../public/Stars.svg";
 import Expertise from "../public/Expertise.svg";
 import ContactImage from "../public/Contact_Image.svg";
 import Footer from "./components/footer/footer";
+import ContactChild from "../public/contactChild.svg";
 
 export default function Home() {
   const [successMessage, setSuccessMessage] = useState('');
@@ -64,20 +65,20 @@ export default function Home() {
         <div className={styles.storyContainer}>
           
           <div className={styles.storyContainerText}>
-            <h2>Our <span className={styles.yellowText}>Story</span></h2>
+            <h2><span className={styles.blueText}>Our Story</span></h2>
             <p className={styles.desktopText}>Bluebonnet Assessment & Services, LLC was founded by Dr. Kidd,<br/> an experienced Bilingual Educational Diagnostician, who has a<br/> passion for serving the special education community.</p>
             <p className={styles.mobileText}>Bluebonnet Assessment & Services, LLC was founded by Dr. Kidd,
 an experienced Bilingual Educational Diagnostician, who has a
 passion for serving the special education community.</p>
           </div>
 
-          <Image src={Headshot.src} alt="Headshot" width={400} height={400} className={styles.storyImage}/>
+          <Image src={ContactImage.src} alt="Headshot" width={400} height={400} className={styles.storyImage}/>
         </div>
 
         <div className={styles.missionContainer}>
           <div className={styles.missionContainerText}>
             <div className={styles.missionHeaderContainer}>
-              <h2>The <span className={styles.purpleText}>Bluebonnet</span> Way</h2>
+              <h2><span className={styles.blueText}>The Bluebonnet Way</span></h2>
               <Image src={Stars.src} alt="Stars" width={100} height={100} className={styles.starImage}/>
             </div>
             <p className={styles.desktopText}>We were created in order to provide educational contracted services to school districts in<br/> need of special education support. Our staff is passionate about ensuring students with<br/> special needs receive remarkable developmental and learning opportunities. <br/>We are prepared to assist with the current staffing shortages within our special education<br/> departments. Furthermore, we are committed to providing high quality and prompt work<br/> while adhering to state and federal guidelines.</p>
@@ -89,7 +90,7 @@ passion for serving the special education community.</p>
         <div className={styles.expertiseContainer}>
           <Image src={Expertise.src} alt="Headshot" width={500} height={500} className={styles.expertImage}/>
           <div className={styles.expertiseContainerText}>
-            <h2>Areas Of <span className={styles.redText}>Expertise</span></h2>
+            <h2><span className={styles.blueText}>Areas Of Expertise</span></h2>
             <div className={styles.servicesText}>
               <p>Our experienced staff specializes in monolingual and bilingual educational and<br/>
                   individualized program planning along with completing comprehensive full and<br/> individual evaluations. 
@@ -111,7 +112,7 @@ passion for serving the special education community.</p>
 
         <div className={styles.contactContainer} id="contact">
           <div className={styles.contactFormContainer}>
-            <h2><span className={styles.blueText}>Contact</span> Us</h2>
+            <h2><span className={styles.blueText}>Contact Us</span></h2>
             {successMessage && <p className={styles.successMessage}>{successMessage}</p>}
             {!successMessage && <p>Fill out the form below, and we&apos;ll<br/> get back to you as soon as possible.</p>}
             <form className={styles.contactForm} onSubmit={handleSubmit}>
@@ -130,7 +131,7 @@ passion for serving the special education community.</p>
               <button type="submit" className={styles.sendButton}>Send</button>
             </form>
           </div>
-          <Image src={ContactImage.src} alt="Contact" width={400} height={400} className={styles.contactImage}/>
+          <Image src={ContactChild.src} alt="Contact" width={400} height={400} className={styles.contactImage}/>
         </div>
         <Footer />
       </main>

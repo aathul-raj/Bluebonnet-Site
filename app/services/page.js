@@ -115,7 +115,7 @@ export default function Services(){
 
                 <div className={styles.contactContainer}>
                     <div className={styles.contactFormContainer}>
-                        <h2><span className={styles.blueText}>Contact</span> Us</h2>
+                        <h2><span className={styles.blueText}>Contact Us</span></h2>
                         {successMessage && <p className={styles.successMessage}>{successMessage}</p>}
                         {!successMessage && <>
                         <p className={styles.desktopText}>Fill out the form below, and we&apos;ll<br/> get back to you as soon as possible.</p>

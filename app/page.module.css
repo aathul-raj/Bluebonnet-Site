@@ -39,6 +39,10 @@
     color: #2272BC;
 }
 
+span.blueText{
+    color: #2272BC;
+}
+
 .landingText h1 span.redText{
     color: #EF3272;
 }
@@ -344,10 +348,9 @@ p.successMessage{
         text-align: center;
     }
   
-    .storyImage,
-    .contactImage {
-      width: 50%;
-      height: 50%;
+    .storyImage{
+      width: 75%;
+      height: 75%;
     }
 
     .storyImage{
@@ -356,6 +359,8 @@ p.successMessage{
 
     .contactImage{
         margin-top: 5rem;
+        width: 75%;
+        height: 75%;
     }
 
     .blueBonnetImage{

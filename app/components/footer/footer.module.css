@@ -117,11 +117,12 @@ footer.footer{
     }
   
     .footerLogoImg {
-      width: 200px;
+        z-index: 10;
+      width: 300px;
     }
 
     .footerLogoLine{
-        width: 15vw;
+        width: 5vw;
         height: 3px;
     }
 
