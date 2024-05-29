@@ -4,7 +4,7 @@ import Footer from '../components/footer/footer';
 import Header from '../components/header/header';
 import styles from './services.module.css';
 import RightArrow from "../../public/Right_Arrow.svg";
-import ContactImage from "../../public/ContactChild.svg";
+import ContactImage from "../../public/contactChild.svg";
 import Image from 'next/image';
 
 export default function Services(){
