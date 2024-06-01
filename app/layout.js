@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" type="image/png" sizes="180x180" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <body className={inter.className}>{children}</body>
